@@ -8,6 +8,12 @@ class Rectangle{
     * @param {int} height height of rectangle
     */
     constructor(width, height) {
+
+        //Error checking
+        if (typeof width != "number" || width < 0 || typeof height != "number" || height < 0){
+            throw "Width and height must be numbers greater than 0!"
+        }
+
         this.width = width;
         this.height = height;
     }
@@ -17,6 +23,12 @@ class Rectangle{
      * @param {int} width  
      */
     set_width(width){
+
+        //Error checking
+        if (typeof width != "number" || width < 0){
+            throw "Width must be a number greater than 0!"
+        }
+
         this.width = width;
     }
     
@@ -25,6 +37,12 @@ class Rectangle{
      * @param {int} height 
      */
     set_height(height){
+
+        //Error checking
+        if (typeof height != "number" || height < 0){
+            throw "Height must be a number greater than 0!"
+        }
+
         this.height = height;
     }
 
@@ -80,6 +98,11 @@ class Rectangle{
      */
     get_amount_inside(shape){
 
+        //Error checking
+        if (!(shape instanceof Rectangle)){
+            throw "shape must be an isntance of Rectangle!"
+        }
+        
         width = Math.floor(shape.width / this.width);
         height = Math.floor(shape.height / this.height);
         

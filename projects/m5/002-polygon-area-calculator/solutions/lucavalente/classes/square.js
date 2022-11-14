@@ -10,6 +10,12 @@ class Square extends Rectangle {
      * @param {int} side of the square
      */
     constructor(side){
+
+        //Error checking
+        if (typeof side != "number" || side < 0){
+            throw "side must be a number greater than 0!"
+        }      
+
         super(side, side);
     }
 
@@ -18,6 +24,12 @@ class Square extends Rectangle {
      * @param {int} side  
      */
     set_height(side){
+
+        //Error checking
+        if (typeof side != "number" || side < 0){
+            throw "height must be a number greater than 0!"
+        }     
+
         this.width = side;
         this.height = side;
     }
@@ -27,6 +39,12 @@ class Square extends Rectangle {
      * @param {int} side  
      */
     set_width(side){
+
+        //Error checking
+        if (typeof side != "number" || side < 0){
+            throw "width must be a number greater than 0!"
+        }     
+
         this.width = side;
         this.height = side;
     }
@@ -36,6 +54,12 @@ class Square extends Rectangle {
      * @param {int} side  
      */
     set_side(side){
+
+        //Error checking
+        if (typeof side != "number" || side < 0){
+            throw "side must be a number greater than 0!"
+        }  
+        
         this.width = side;
         this.height = side;    
     }
